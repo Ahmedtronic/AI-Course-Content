@@ -1,0 +1,24 @@
+CNN : convolutional neural network 
+
+A- Special Kind of neural network commonly used for image classification
+B- Regular Neural Nets don’t scale well to full images
+C- Full connectivity is wasteful and the huge number of parameters would quickly lead to overfitting.
+D- Convolutional Neural Networks take an input consists of images and they constrain the architecture in a more sensible way. In particular, the layers of a ConvNet have neurons arranged in 3 dimensions: width, height, depth. 
+* depth here refers to the fact that the image consists of 3 matrices ( Red, Green, and Blue)
+
+Simple Simulation : Input Image (weight*hight*3) --> Conv layer ( weight*height* number of filters ) --> pooling (weight/ratio * height/ratio * number of filters )  --> fully connected network --> number of neurons equal to number of classes --> output ( result )
+ 
+CNN Summary: 
+
+1 - It is best suited for image but can also be used in classification and nlp 
+2 - It consists of different types of layers so that it can calculate optimally (accuracy & speed)
+3 - It has mainly three types of layers : Conv layer, Pooling layer, Fully connected layer, dropout
+4 - It requires specific type of activation function
+5 - Images will be fitted in the input layer as W*H*3 (3D) as it consists of R, G, and B matrix ( RGB for each pixel ) 
+6 - Conv layer: consists of filters that later applied to slices of images to calculate dot product 
+7 - Pooling layer : reduces ( down-sampling ) the dimension for the input to only capture the important features (can be done by maxpooling or averagepooling) 
+8 - fully connected network : after features extraction and dimensionality reduction, we make a structure of a basic neural network to begin the classification
+9 - dropout layer reduces overfitting by "dropping out" a random set of neurons during training. This means that the connections to certain neurons are multiplied by 0
+10- last layer must have a number of neurons that is equal to the number of classes   
+11- filters are responsible for detecting feaures ( edges, corners, colors, objects or any other common factor) 
+12- when feature number are bigger than needed, it causes overfitting ( but still can be handled )
